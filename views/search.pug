@@ -1,0 +1,29 @@
+extends index
+
+block content
+  
+  .w3-content(style='max-width:1400px')
+    //Back button
+    p
+      a.w3-button.w3-padding-large.w3-white.w3-border(href='/') BACK
+    form.w3-container(action='/search', method='post')
+      input.w3-padding-large.w3-white.w3-border(type='text', name='title')
+      input.w3-button.w3-padding-large.w3-white.w3-border(type='submit',value='SEARCH')
+    // Grid
+    .w3-row
+      // Blog entries
+      .w3-col.l8.s12
+      p.w3-margin
+        | Searched for: 
+        !=searchedfor
+      // Blog entry
+      .w3-card-4.w3-margin.w3-white
+        .w3-container
+          h3= title
+        .w3-container
+          p= content
+    // Footer
+    footer.w3-container.w3-dark-grey.w3-padding-32.w3-margin-top
+      p
+      | Powered by
+      a(href='https://www.w3schools.com/w3css/default.asp', target='_blank') w3.css

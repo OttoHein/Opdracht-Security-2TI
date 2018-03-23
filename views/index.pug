@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  //
+    w3-content defines a container for fixed size centered content,
+    and is wrapped around the whole page content, except for the footer in this example
+  .w3-content(style='max-width:1400px')
+    // Header
+    header.w3-container.w3-center.w3-padding-32
+      h1
+        b Solstafir lyrics
+      p
+        | Last three posts
+    // New Post button
+    .w3-container
+      a.w3-button.w3-padding-large.w3-white.w3-border(href='/newblog') ADD NEW LYRICS
+      a.w3-button.w3-right.w3-padding-large.w3-white.w3-border(href='/search') SEARCH
+    // Grid
+    .w3-row
+      // Blog entries
+      .w3-col.l8.s12
+      // Blog entry
+      .w3-card-4.w3-margin.w3-white
+        .w3-container
+          h3= title1
+        .w3-container
+          p= content1
+      // Blog entry
+      .w3-card-4.w3-margin.w3-white
+        .w3-container
+          h3= title2
+        .w3-container
+          p= content2
+      // Blog entry
+      .w3-card-4.w3-margin.w3-white
+        .w3-container
+          h3= title3
+        .w3-container
+          p= content3
+      // END BLOG ENTRIES
+  // Footer
+  footer.w3-container.w3-dark-grey.w3-padding-32.w3-margin-top
+    p
+      | Powered by
+      a(href='https://www.w3schools.com/w3css/default.asp', target='_blank') w3.css

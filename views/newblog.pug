@@ -1,0 +1,33 @@
+extends layout
+
+block content  
+  //
+    w3-content defines a container for fixed size centered content,
+    and is wrapped around the whole page content, except for the footer in this example
+  .w3-content(style='max-width:1400px')
+    //Back button
+    p
+      a.w3-button.w3-padding-large.w3-white.w3-border(href='/') BACK
+      
+    //Input field
+    form(action='/newblog', method='post')
+      | Title:
+      br
+      input(type='text', name='title')
+      br
+      | Lyrics:
+      br
+      textarea(type='input', name='content')
+      br
+      br
+      input(type='submit', value='Submit')
+        
+    // Footer
+    footer.w3-container.w3-dark-grey.w3-padding-32.w3-margin-top
+      p
+        | Powered by
+        a(href='https://www.w3schools.com/w3css/default.asp', target='_blank') w3.css
+
+
+        
+    
