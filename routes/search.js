@@ -25,7 +25,7 @@ router.post('/', function(req, res, next) {
     ? res.render('search', {title: row.title, content: row.content, searchedfor: req.body.title})
     : res.render('search', {searchedfor: req.body.title + '(Not found)'});
   });
-  res.set('title',req.body.title);
+  res.cookie('title', req.body.title);
 });
 
 module.exports = router;
