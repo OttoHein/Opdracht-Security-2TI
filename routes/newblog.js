@@ -33,9 +33,9 @@ router.post('/', function(req, res, next) {
         }
 
   //To database
-  var sql = 'INSERT INTO posts(id,title,content,date) VALUES(?,?,?,?)';
+  var sql = 'INSERT INTO posts(id,title,content,date) VALUES(' + blogpost.id + ',' + blogpost.title + ',' + blogpost.content ',' + blogpost.date + ')';
   var values = [blogpost.id, blogpost.title, blogpost.content, blogpost.date];
-  db.run(sql, values, function(err) {
+  db.run(sql, function(err) {
   if (err) {
     return console.log(err.message);
   }
