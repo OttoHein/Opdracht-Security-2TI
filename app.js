@@ -48,7 +48,7 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 var server_port = process.env.OPENSHIFT_NODE4_PORT || 8080;
-var server_ip_address = process.env.OPENSHIFT_NODE4_IP || '127.0.0.1';
+var server_ip_address = process.env.OPENSHIFT_NODE4_IP || '0.0.0.0';
 
 var server = app.listen(server_port, server_ip_address,  function () {
   var host = server.address().address;
